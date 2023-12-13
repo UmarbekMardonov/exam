@@ -1,3 +1,3 @@
 from django.test import TestCase
+from .models import Lesson
 
-# Create your tests here.

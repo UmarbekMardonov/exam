@@ -50,5 +50,51 @@ class MainStatistic(generics.GenericAPIView):
 
 class AdsView(generics.ListAPIView):
     # queryset = models.Ads.objects.all().order_by('?')
-    queryset = models.Ads.objects.all().select_related('category').order_by('-id')
+    --queryset = models.Ads.objects.all().select_related('category').order_by('-id')
     serializer_class = serializers.AdsSerializer
+
+"""
+
+Product
+    - title
+    - price 80 
+    - discount price 100
+    - count - 15 ta bor
+    - is active - True
+  
+    - function active
+    - function can buy ( count )  
+
+    Product active bo'ladi qachonki is active bo'lsa va count >0
+
+    Product ni sotib olib bo'ladimi (count) 
+    Tugalmagan, yoki Paymentda bo'lgan productlarni hold qilib turishi kerak.
+    
+    Product sotib olingandan so'ng canceled bo'lsa countlarini joyiga qaytirishi kerak.
+
+Cart
+    - user
+    - product
+    - quantity
+    - is active
+
+    update quantity
+    create order
+
+    agar berilgan miqdorda productni sotib olish mumkin bo'lsa cart countni yangilash kerak.
+
+Order
+    - total price
+    - user
+    - total discount
+    - status - INITIAL, PAYMENT, ACCEPTED, CANCELED, DELIVERED
+
+    Order accepted bo'lsa product count dan ayrilishi kerak.
+    canceled bo'lsa qo'shilishi kerak.
+
+
+Order Product
+    - product
+    - order
+    - price
+    - quantity """

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from sorl.thumbnail import ImageField
 
 UserAuth = get_user_model()
 
@@ -68,3 +69,4 @@ class Category(models.Model):
 class Ads(models.Model):
     title = models.CharField(max_length=220)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    image = ImageField(upload_to='media/ads/', blank=True, null=True)

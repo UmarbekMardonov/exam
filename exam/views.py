@@ -50,7 +50,7 @@ class MainStatistic(generics.GenericAPIView):
 
 class AdsView(generics.ListAPIView):
     # queryset = models.Ads.objects.all().order_by('?')
-    --queryset = models.Ads.objects.all().select_related('category').order_by('-id')
+    queryset = models.Ads.objects.all().select_related('category').order_by('-id')
     serializer_class = serializers.AdsSerializer
 
 """

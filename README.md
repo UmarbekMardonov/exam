@@ -8,4 +8,5 @@ rosetta
 Modeltranslation
 throttling
 Signals
+CKeditor
 

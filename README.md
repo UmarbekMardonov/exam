@@ -1,6 +1,5 @@
 # exam
 
-bs4 orqali parsing
 parsing
 Web scraping (Selenium, BeautifulSoup)
 sentry
@@ -9,4 +8,5 @@ Modeltranslation
 throttling
 Signals
 CKeditor
+Query Optimization
 
